@@ -17,12 +17,12 @@ In Viral Jamz, users will be able to:
 
 In addition, this project will include:
 
-1. A tab the shows artist you make like based off of the selection you hover over.
-2. Instruction on how to use the date selector.
+- A tab the shows artist you make like based off of the selection you hover over.
+- Instruction on how to use the date selector.
 
 ### **Wireframe**
 
-![Figma image!](Viral_Jamz/images/phonto.JPG)
+![Figma image](./Viral_Jamz/Viral_Jamz/images/viralJamz.png)
 
 ### **Technologies, Libraries, APIs**
 
