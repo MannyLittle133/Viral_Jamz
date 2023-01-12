@@ -22,7 +22,7 @@ In addition, this project will include:
 
 ### **Wireframe**
 
-![Figma image](./Viral_Jamz/Viral_Jamz/images/viralJamz.png)
+![Figma image](./images/viralJamz.png)
 
 ### **Technologies, Libraries, APIs**
 
