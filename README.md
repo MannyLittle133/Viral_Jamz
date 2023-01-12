@@ -22,7 +22,7 @@ In addition, this project will include:
 
 ### **Wireframe**
 
-![Figma image!](/Users/mannylitt/Desktop/AA_NovCohort/Manny_Little_jsProject_ViralJamz/Viral_Jamz/images/phonto.JPG)
+![Figma image!](Viral_Jamz/images/phonto.JPG)
 
 ### **Technologies, Libraries, APIs**
 
