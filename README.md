@@ -22,7 +22,7 @@ In addition, this project will include:
 
 ### **Wireframe**
 
-![Figma image](./images/phonto.png)
+![Figma image!](./images/phonto.png)
 
 ### **Technologies, Libraries, APIs**
 
