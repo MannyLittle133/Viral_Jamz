@@ -31,8 +31,13 @@ In addition, this project will include:
 
 ### **Implementation Timeline**
 
-Friday Afternoon & Weekend - get started with resourcing the API's, creating content on HTML as well as the layout for the page.
-Monday - start implementing the code necessary for functionality of the page.
-Tuesday - get the date selection to work and update the page.
-Wednesday - start working on the css for the page to make the page more appealing.
-Thursday Morning - look into bugs and last minute fixes.
+1. Friday Afternoon & Weekend 
+- get started with resourcing the API's, creating content on HTML as well as the layout for the page.
+2. Monday
+- start implementing the code necessary for functionality of the page.
+3. Tuesday 
+- get the date selection to work and update the page.
+4. Wednesday 
+- start working on the css for the page to make the page more appealing.
+5. Thursday Morning
+- look into bugs and last minute fixes.
