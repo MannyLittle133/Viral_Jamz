@@ -2,7 +2,7 @@
 
 ### **Background** 📖
 
-How much do you know about your favorite song? Have you ever wondered what song was most popular the day you were born? Maybe you are interested in discovering new music that is loved by people all over the world. With the “#ViRaL_JaMz” you can uncover information and statistics based on the music everyone loves.
+How much do you know about your favorite song? Have you ever wondered what song was most popular the day you were born? Maybe you are interested in discovering new music that is loved by people all over the world. With “#ViRaL_JaMz” you can uncover information and statistics based on the music everyone loves.
 
 Upon reaching the website you are greeted by a list-like page containing the artist’s picture/album artwork. There will be a blurb next to the picture/album artwork containing information for each song. It will show you this song's current ranking, along with the amount of weeks the song was ranked based off of Billboard’s “Hot 100” API. The functionality of the page will include a genre selector as well as a date selector which allows you to see the ranking of the song at the current time you select and present narrowed down search results based off of the criteria you enter. Once the filters are entered (genre/date) the list will change to the ranking songs of the time period you have selected. When clicking on a particular artist’s picture/album artwork you will be presented with a description and short biography on the artist and song. Lastly, a link to watch a music video attached to the current song will also be available along with resources to view the lyrics of the song.
 
