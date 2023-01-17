@@ -10,9 +10,16 @@ img {
     position: center;
 }
 
-img:hover {
+h1 > img:hover {
     transform: scale(1.1);
 }
 
 
 
+body {
+    background-color: black;
+}
+
+li {
+    color: white;
+}

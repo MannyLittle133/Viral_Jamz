@@ -31,7 +31,7 @@ class Data {
             json: true
         })
             .then(response => {
-                debugger
+                // debugger
                 if (response.status === 200) {
                     return response.json();
                 } else {
@@ -44,7 +44,7 @@ class Data {
             .catch(error => {
                 console.error('Error:', error);
             });
-        debugger
+        // debugger
     }
 
 
