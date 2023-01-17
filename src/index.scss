@@ -10,8 +10,8 @@ img {
     position: center;
 }
 
-h1 > img:hover {
-    transform: scale(1.1);
+img:hover {
+    transform: scale(5.1);
 }
 
 
@@ -23,3 +23,5 @@ body {
 li {
     color: white;
 }
+
+@import url('./styles/li.scss');

@@ -39,32 +39,48 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     let top_tracks = document.querySelector('#top-tracks');
 
-    let ul = document.createElement('ul');
+    let ulOuter = document.createElement('ul');
+    ulOuter.className = 'top-tracks-ul-outer';
 
-    debugger
+    // debugger
     for (let key in top_hits_track_details) {
+        let ul = document.createElement('ul');
+        ul.className = 'top-tracks-ul';
+        // debugger
+        // li.innerHTML = top_hits_track_details[key];
+        let numberLi = document.createElement('li')
+        numberLi.innerHTML = parseInt(key) + 1;
+        ul.appendChild(numberLi);
         let li = document.createElement('li');
-        debugger
-        li.innerHTML = top_hits_track_details[key];
-        for (let song in top_hits_track_details[key]) {
-            li.innerHTML = top_hits_track_details[key][song];
-
-        }
-
-        // ul.appendChild(li);
-    }
-    for (let i = 0; i < 50; i++) {
-        let li = document.createElement('li');
-        li.innerHTML = top_hits_track_details[i].trackName;
         let img = document.createElement('img');
-        img.src = top_hits_track_details[i].albumCoverUrl;
-        li.append(img);
-        ul.appendChild(li);
-    }
+        
+        img.src = top_hits_track_details[key].albumCoverUrl;
+        img.className = 'album-img';
+        ul.appendChild(img);
+        li.className = 'top-tracks-li';
+        for (let key_of_obj in top_hits_track_details[key]) {
+            if ("albumCoverUrl" !== key_of_obj) {
+            li.innerHTML += `${top_hits_track_details[key][key_of_obj]} | `;
+            ul.appendChild(li);
+            }
+            // debugger
+        }
+        ul.appendChild(document.createElement('br'));
+        ulOuter.appendChild(ul);
 
-    debugger
-    top_tracks.appendChild(ul);
-    debugger
+    }
+    // for (let i = 0; i < 10; i++) {
+    //     let li = document.createElement('li');
+    //     li.innerHTML = top_hits_track_details[i].trackName;
+    //     let img = document.createElement('img');
+    //     img.src = top_hits_track_details[i].albumCoverUrl;
+    //     li.append(img);
+    //     ul.appendChild(li);
+    // }
+
+    // debugger
+    top_tracks.appendChild(ulOuter);
+    // debugger
     console.log('VIRAL JAMZ - TOP HITS');
     // access_token
 
