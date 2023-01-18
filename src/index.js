@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             const trackName = jsonObject.track.name;
             const albumCoverUrl = jsonObject.track.album.images[0].url;
             const songPreviewUrl = jsonObject.track.preview_url;
-            tracksDetails[index] = {albumName, artistName, trackName, albumCoverUrl, songPreviewUrl};
+            // removed albumName
+            tracksDetails[index] = {artistName, trackName, albumCoverUrl, songPreviewUrl};
         });
         return tracksDetails;
     }
@@ -54,14 +55,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         ul.appendChild(numberLi);
         let li = document.createElement('li');
         let img = document.createElement('img');
-        
         img.src = top_hits_track_details[key].albumCoverUrl;
         img.className = 'album-img';
         ul.appendChild(img);
         li.className = 'top-tracks-li';
         // show track details
         for (let key_of_obj in top_hits_track_details[key]) {
-            if ("albumCoverUrl" !== key_of_obj) {
+            if ("albumCoverUrl" !== key_of_obj && "songPreviewUrl" !== key_of_obj) {
             li.innerHTML += `${top_hits_track_details[key][key_of_obj]} | `;
             ul.appendChild(li);
             }
