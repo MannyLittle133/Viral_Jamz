@@ -28,28 +28,21 @@ document.addEventListener('DOMContentLoaded', async function() {
         return tracksDetails;
     }
 
-
     const data = new Data();
     let token = await Data.access_token(data);
-
     let top_hits = await Data.getTopTracks(token);
-
 
     // This is a list of tracks with details
     let top_hits_track_details = extractTrackDetailsFromArrayWithKey(top_hits);
-
 
     let top_tracks = document.querySelector('#top-tracks');
 
     let ulOuter = document.createElement('ul');
     ulOuter.className = 'top-tracks-ul-outer';
 
-    // debugger
     for (let key in top_hits_track_details) {
         let ul = document.createElement('ul');
         ul.className = 'top-tracks-ul';
-        // debugger
-        // li.innerHTML = top_hits_track_details[key];
         let numberLi = document.createElement('li')
         numberLi.innerHTML = parseInt(key) + 1;
         ul.appendChild(numberLi);
@@ -76,6 +69,16 @@ document.addEventListener('DOMContentLoaded', async function() {
             
             // debugger
         }
+
+        // for (let i = 0; i < 10; i++) {
+        //     let li = document.createElement('li');
+        //     li.innerHTML = top_hits_track_details[i].trackName;
+        //     let img = document.createElement('img');
+        //     img.src = top_hits_track_details[i].albumCoverUrl;
+        //     li.append(img);
+        //     ul.appendChild(li);
+        // }
+        
         ul.appendChild(document.createElement('br'));
         ulOuter.appendChild(ul);
 
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // debugger
     top_tracks.appendChild(ulOuter);
     // debugger
-    console.log('VIRAL JAMZ - TOP 50');
+    console.log('#VIRAL JAMZ - TOP 50');
     // access_token
 
     // import { getTopTracks } from './scripts/apiUtil';
