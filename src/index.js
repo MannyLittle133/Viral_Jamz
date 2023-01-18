@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             const artistName = jsonObject.track.album.artists[0].name;
             const trackName = jsonObject.track.name;
             const albumCoverUrl = jsonObject.track.album.images[0].url;
-            tracksDetails[index] = {albumName, artistName, trackName, albumCoverUrl};
+            const songPreviewUrl = jsonObject.track.preview_url;
+            tracksDetails[index] = {albumName, artistName, trackName, albumCoverUrl, songPreviewUrl};
         });
         return tracksDetails;
     }
@@ -58,11 +59,21 @@ document.addEventListener('DOMContentLoaded', async function() {
         img.className = 'album-img';
         ul.appendChild(img);
         li.className = 'top-tracks-li';
+        // show track details
         for (let key_of_obj in top_hits_track_details[key]) {
             if ("albumCoverUrl" !== key_of_obj) {
             li.innerHTML += `${top_hits_track_details[key][key_of_obj]} | `;
             ul.appendChild(li);
             }
+            // show song preview
+            if ("songPreviewUrl" === key_of_obj && top_hits_track_details[key][key_of_obj] !== null) {
+                let audio = document.createElement('audio');
+                audio.src = top_hits_track_details[key][key_of_obj];
+                audio.controls = true;
+                audio.className = 'audio';
+                ul.appendChild(audio);
+            }
+            
             // debugger
         }
         ul.appendChild(document.createElement('br'));
@@ -81,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // debugger
     top_tracks.appendChild(ulOuter);
     // debugger
-    console.log('VIRAL JAMZ - TOP HITS');
+    console.log('VIRAL JAMZ - TOP 50');
     // access_token
 
     // import { getTopTracks } from './scripts/apiUtil';

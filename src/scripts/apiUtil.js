@@ -56,19 +56,20 @@ class Data {
             },
             json: true
         })
-            .then(response => {
-                if (response.status === 200) {
-                    return response.json();
-                } else {
-                    throw new Error('Error making request');
-                }
-            })
-            .then(body => {
-                return body.items;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+        // debugger
     }
 }
 
