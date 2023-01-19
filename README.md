@@ -26,7 +26,8 @@ In addition, this project will include:
 
 ### **Current Look** 🎨🖼
 
-![Figma image](./images/currentLook.png)
+![Figma image](./images/current1.png)
+![Figma image](./images/current2.png)
 
 ### **Technologies, Libraries, APIs** 🔬🧪
 
