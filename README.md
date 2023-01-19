@@ -24,6 +24,10 @@ In addition, this project will include:
 
 ![Figma image](./images/phonto_2.jpg)
 
+### **Current Look** 🎨🖼
+
+![Figma image](./images/currentLook.png)
+
 ### **Technologies, Libraries, APIs** 🔬🧪
 
 - WebPack, Javascript, HTML, and CSS
