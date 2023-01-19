@@ -69,8 +69,127 @@ class Data {
         .catch(error => {
             console.error('Error:', error);
         });
+    }
+    
+    static async getTopArtists(access_token) {  
+        return await fetch('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=long_term', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + access_token
+            },
+            json: true
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    static async getTopGenres(access_token) {
+        return await fetch('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=long_term', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + access_token
+            },
+            json: true
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    static async getTopTracksByGenre(access_token, genre) {
+        return await fetch(`https://api.spotify.com/v1/search?q=genre:${genre}&type=track&limit=50`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + access_token
+            },
+            json: true
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.tracks.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    static async getTopArtistsByGenre(access_token, genre) {    
+        return await fetch(`https://api.spotify.com/v1/search?q=genre:${genre}&type=artist&limit=50`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + access_token
+            },
+            json: true
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.artists.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    static async getHiphop(access_token) {
         // debugger
+        return await fetch("https://api.spotify.com/v1/browse/featured-playlists", {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + access_token
+            },
+            json: true
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Error making request');
+            }
+        })
+        .then(body => {
+            return body.items;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 }
 
 export default Data;
+
+// let hipHip = "https://api.spotify.com/v1/browse/featured-playlists";
+// debugger
+// rap api: https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks
